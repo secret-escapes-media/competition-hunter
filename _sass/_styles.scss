@@ -1,0 +1,270 @@
+// all custom styles for the site
+
+
+// ---------- Section styles ----------
+
+.invert-text { color: $white; }
+.bg {
+  &--white      { background-color: $white; }
+  &--black      { background-color: $black; }
+  &--light-grey { background-color: $light-grey; }
+  &--dark-grey  { background-color: $dark-grey; }
+  &--text-black     { background-color: $text-black; }
+  &--text-heading   { background-color: $text-heading; }
+  &--text-paragraph { background-color: $text-paragraph; }
+  &--se-orange     { background-color: $se-orange; }
+  &--se-light-grey { background-color: $se-light-grey; }
+  &--se-dark-grey  { background-color: $se-dark-grey; }
+  &--partner-primary   { background-color: $partner-primary; }
+  &--partner-secondary { background-color: $partner-secondary; }
+}
+
+// ---------- button ----------
+
+.btn {
+  @include transition;
+  display:inline-block;
+  padding: .66em 2.5em;
+  border: 1px solid #76a145;
+  font-weight: 600;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: 3px;
+  &:hover {
+    color: white;
+    background-color: #649032;
+    text-decoration: none;
+  }
+  * + & { margin-top: 1em; }
+
+  &--solid { color: white; border: 0; background-color: #76a145; }
+  &--orange {
+    color: white;
+    border: 0;
+    background-color: $se-orange;
+    &:hover{
+      background-color: #e67812;
+    }
+  }
+  &--large { font-size: 1.2em; padding: .5em 3em; }
+}
+
+
+// ---------- Section styles ----------
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  z-index: $z-background;
+  background: $se-dark-grey center no-repeat;
+  background-image: url('../img/bg/bg.jpg');
+  background-size: cover;
+}
+
+.logos {
+  > * {
+    vertical-align: middle;
+    line-height: 0;
+  }
+}
+
+.logo {
+  padding: 1em;
+  @include bp(medium){
+    padding: 1.2em 1.75em;
+  }
+  &__divider {
+    display: inline-block;
+    height: 70px;
+    vertical-align: middle;
+    border-left: 1px solid $white-25;
+  }
+}
+
+.intro {
+  height: 600px;
+  padding-top: 50px;
+  color: $white;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  .flexbox & {
+    display: flex;
+    justify-content: flex-start;
+    height: 70%;
+    padding-top: 0;
+  }
+}
+
+.page {
+  padding: $margin 0;
+  background-color: $white;
+  box-shadow: 0px 0px 42.4px 10.6px rgba(0, 0, 0, 0.1);
+  @include bp(large){
+    padding: ($margin * 2) 0;
+  }
+  @include bp(xxlarge){
+    margin-bottom: ($margin*2);
+  }
+  @include bp(xxxlarge){
+    border-radius: 4px;
+  }
+}
+
+.form {
+  margin-top: 1.2em;
+  border: solid 1px #e8e6e3;
+  background: #fff url('../img/icons/loading.gif') center no-repeat;
+  background-size: 16px;
+  overflow: hidden;
+}
+
+
+// ---------- enter-bar ----------
+
+.enter-bar {
+  display: none;
+  @include bp(large){
+    @include transition();
+    position: fixed;
+    bottom: -100px;
+    display: block;
+    width: 100%;
+    padding: 20px 0;
+    background-color: $black-85;
+    &.active {
+      bottom: 0;
+    }
+  }
+}
+
+
+// ---------- minium height for header ----------
+
+@media (max-height:650px) {
+  .intro,
+  .flexbox .intro {
+    height: 550px;
+    padding-top: 25px;
+  }
+  .background,
+  .flexbox .background {
+    height: 650px;
+  }
+}
+
+
+// ---------- logos ----------
+
+.logo {
+  display: inline-block;
+  &--secret-escapes{
+    margin-top: 4px;
+    > img {
+      max-width: 120px;
+      @include bp(xxxlarge){ max-width: 140px; }
+    }
+  }
+  &--hunter > img {
+    max-width: 60px;
+    @include bp(large){ max-width: 80px; }
+  }
+  &--visit-scotland > img {
+    max-width: 110px;
+    @include bp(large){ max-width: 140px; }
+  }
+}
+
+
+// ---------- prize number ----------
+
+.prize {
+  &__number {
+    position: absolute;
+    top:0;
+    left:0;
+    background-color: $black-85;
+    color: #ffffff;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    font-family: 'Cormorant Garamond';
+    line-height: 100%;
+    vertical-align: middle;
+    padding: 12px 0;
+    font-size: 1.4em;
+    & .num { font-size: 3em; }
+  }
+}
+
+
+// ---------- topic grid ----------
+
+.topic {
+  display: inline-block;
+  padding-bottom: 2em;
+  line-height: 1;
+  vertical-align: top;
+  @include bp(medium){ width: 50%; }
+  @include bp(xlarge){ width: 33.33%; }
+  &__image {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: $light-grey;
+    @include transition;
+    &:before {
+      content: "";
+      display: block;
+      width: 100%;
+      padding-top: 100%;
+      @include transition;
+    }
+  }
+  &__title {
+    position: absolute;
+    left: 1.5em;
+    right: 1.5em;
+    bottom: 1em;
+  }
+  &__description {
+    padding-top: 1em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    font-size: .933em;
+    line-height: 1.5;
+  }
+}
+
+
+// ---------- topic grid ----------
+
+.image-block {
+  line-height: 0;
+  &__image {
+    position: relative;
+    display: inline-block;
+    width: 33.33%;
+    float: right;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    // keeps aspect ratio
+    &:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: 75%;
+    }
+    &:first-child {
+      width: 66.66%;
+      float: left;
+    }
+  }
+}

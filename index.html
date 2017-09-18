@@ -1,0 +1,115 @@
+---
+layout: default
+title: Win an enviable escape on the secluded Isle of Skye
+
+topics:
+
+  - id: quiriang
+    title: The Quiriang
+    description: A landscape where the ground seems to tear itself up into jutting peaks provides an irresistible draw for intrepid adventurers. Expect breathtaking views over this remarkable scene, packed with a drama that makes any hike utterly enthralling.
+
+  - id: northern-lights
+    title: Northern Lights
+    description: It may come as a surprise, but with a little luck on your side the Northern Lights have been known to dance across the skies of the northern fringes of Skye. So forget expensive Scandi breaks, the Lights skip here too.
+
+  - id: dunvegan-castle
+    title: Dunvegan Castle
+    description: Clans, lochs and an enchanting castle – Dunvegan paints a picture of the archetype traditional Scottish landscape. Home to the seat of the Chiefs of Clan MacLeod, you can expect the usual weapons and portraits, alongside curiosities like the pre-7th century Fairy Flag and Bonnie Prince Charlie’s waistcoat.
+
+  - id: the-storr
+    title: The Storr
+    description: The Old Man of Storr is a jutting crag seen for miles around. It marks the top of Skye’s most famous walk. Head up the steep paths past monolithic, piercing stones, rewarded with a truly breathtaking panorama.
+
+  - id: whisky
+    title: Whisky
+    description: Skye’s most famous export has to be the superlative Talisker single malt. Find it across the island in pubs and bars, or take a tour of the distillery accompanied by a free dram. A perfect warmer after a long walk across the hills.
+
+  - id: fairy-pools
+    title: Fairy Pools
+    description: Set off on a hike from Glen Brittle to this beguiling beauty spot, in the shadow of the Black Cuillin Ridge. Cascading waterfalls and enchanting pools dot the landscape, with magnificently clear waters. If you’re feeling brave, take a dip, or simply allow this enrapturing scene to intoxicate the senses.
+
+---
+
+<div class="background"></div>
+
+<div class="intro">
+  <div class="row row--padding">
+    <a class="logo logo--secret-escapes" href="https://www.secretescapes.com/"><img class="js-svg-swap" src="{{ site.baseurl }}/img/logo/secret-escapes.png" alt="Secret Escapes logo"></a>
+    <div class="row--xl">
+      <h1 class="title title--large title--special">{{page.title}}</h1>
+    </div>
+    <div class="space--sm"></div>
+    <div class="logos">
+      <a href="https://www.hunterboots.com/gb/en_gb/?utm_source=secretescapes&utm_medium=affiliates&utm_campaign=fieldcomp" class="logo logo--hunter"><img src="{{ site.baseurl }}/img/logo/hunter.png" alt="Hunter Logo"></a>
+      <div class="logo__divider"></div>
+      <a href="https://www.visitscotland.com/" class="logo logo--visit-scotland"><img class="js-svg-swap" src="{{ site.baseurl }}/img/logo/visit-scotland.png" alt="Visit Scotland Logo"></a>
+    </div>
+    <div class="space--sm"></div>
+    <a id="tracking-cta-comp-header" href="#competition" class="btn btn--solid btn--large">Enter Now</a>
+  </div>
+</div>
+
+<div class="row">
+  <div class="page">
+
+    <p class="row row--xl row--padding paragraph--lead align-center">A wild, rugged landscape, the secluded Isle of Skye is a misty, magical island that distills dramatic Highland scenery and essential Scottish charms. Autumn on the Isle offers an enchanting landscape mottled by deep maroons, dark greens and bright amber. A kaleidoscope of autumnal colour is offset by blue sea and blue sky, a scene that invites wistful walks and serene isolation – a true island escape.</p>
+
+    <div class="row topics">
+        {% for topic in page.topics %}<div class="topic js-topic{% if forloop.index == 1 %} is-closed{% else %} is-closed{% endif %}">
+          <div class="topic__image" style="background-image: url('{{site.baseurl}}/img/topics/{{topic.id}}.jpg');">
+            <div class="topic__title invert-text"><span class="title title--smaller">{{topic.title}}</span></div>
+          </div>
+          <p class="topic__description paragraph">{{topic.description}}</p>
+        </div>{% endfor %}
+    </div>
+
+    <div class="row row--padding-internal row--padding align-center bg--light-grey">
+
+      <h2 class="title title--medium">The Prize</h2>
+      <div class="space--sm"></div>
+
+      <div class="bob">
+        <div class="bob__image">
+          <a id="tracking-comp-hotel" href="#competition">
+            <div class="bg-image-ratio bg-image-ratio--3-2" style="background-image: url('{{site.baseurl}}/img/content/hotel.jpg');"></div>
+          </a>
+        </div>
+        <div class="bob__text">
+          <h3 class="title title--smaller">The Skye Eyrie</h3>
+          <p>This is where you’ll spend up to four nights – a secluded location of breathtaking beauty set in the tranquil hamlet of Culnacnoc. This five-star cottage is a true coastal idyll, with near floor-to-ceiling windows offering glorious panorama over the stunning coastline. With modern design adding comfort to this enviable stay, you’ll have all you need to rejuvenate this autumn.</p>
+          <p>This superlative stay is brought to you by <a href="http://www.r-escape.co.uk" style="font-weight: 700;">R-Escapes</a>. From the award-winning R.HOUSE team, the building contains the design and eco-principles that the group is well known for. A perfect rural escape for the discerning traveller.</p>
+        </div>
+      </div>
+      <div class="bob">
+        <div class="bob__image">
+          <a id="tracking-comp-hunter" href="#competition">
+            <div class="bg-image-ratio bg-image-ratio--3-2" style="background-image: url('{{site.baseurl}}/img/content/hunter.jpg');"></div>
+          </a>
+        </div>
+        <div class="bob__text">
+          <h3 class="title title--smaller">Hunter Boots</h3>
+          <p>This rugged terrain necessitates a sturdy boot. Don quintessential British fashion that can withstand the tricky Highland landscape, with the Hunter Norris Field Wellington Boots. You’ll win two pairs to accompany your escape, for fortuitous rambles and hikes in the dramatic scenery that is so unique to this island idyll.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row row--padding competition align-center" id="competition">
+      <div class="row--lg">
+        <h2 class="title title--smaller">Submit your details below to be entered into the draw. Good luck!</h2>
+        <div class="form">
+          <iframe src="https://promotion4043.strutta.me" width="100%" height="775"></iframe>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="row row--padding invert-text align-center">
+  <div class="space--lg"></div>
+  <h2 class="title title--medium title--light title--margin-none">Feeling inspired?</h2>
+  <p class="paragraph--lead" style="font-weight:400;">Discover Secret Escapes offers to tempt you to the wild landscape of Scotland...</p>
+  <a id="track-se-offers-scotland" href="https://www.secretescapes.com/search/search?query=Scotland" class="btn btn--orange">View Scotland Offers</a>
+  <div class="space--xxl"></div>
+</div>

@@ -1,0 +1,10 @@
+# Site settings
+title: Hunter
+description: >
+  A wild, rugged landscape, the secluded Isle of Skye is a misty, magical island that distills dramatic Highland scenery and essential Scottish charms
+baseurl: "/hunter" # the subpath of your site, e.g. /blog/
+url: "http://mp.secretescapes.com" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+exclude: [node_modules, gulpfile.js, package.json, package-lock.json, bower_components, bower.json, README.md]
